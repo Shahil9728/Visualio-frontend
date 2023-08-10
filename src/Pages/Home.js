@@ -30,7 +30,7 @@ const Home = () => {
     else {
       setIsLoading(true);
       try {
-        const response = await fetch("http://localhost:4000/api", {
+        const response = await fetch("https://visualio-backend.onrender.com/api", {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
@@ -64,7 +64,7 @@ const Home = () => {
     else {
       setIsscriptLoading(true);
       try {
-        const response = await fetch("http://localhost:4000/getscript", {
+        const response = await fetch("https://visualio-backend.onrender.com/getscript", {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
