@@ -1,0 +1,185 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-family: sans-serif;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    scroll-behavior: smooth;
+    /* overflow: hidden; */
+}
+
+::selection {
+    background-color: #ed00eb;
+    color: black;
+}
+
+#navbar {
+    height: 4rem;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    /* justify-content: space-between; */
+    align-items: center;
+    position: relative;
+    background: black;
+    box-shadow: 0px 3px 25px black;
+    color: #919191;
+    padding-right: 1rem;
+}
+
+.user
+{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: right;
+}
+
+#navbar #logo {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    color: white;
+    align-items: center;
+    justify-content: center;
+    font-weight: 100;
+    margin-left: 2rem;
+    cursor: pointer;
+}
+
+#navbar #logo img {
+    height: 40px;
+    width: 40px;
+    cursor: pointer;
+}
+
+/* This styles the unlisted links in the navbar */
+#navbar ul {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+}
+
+/* This changes the appearance of the listed links in the navbar */
+#navbar ul li {
+    width: 80px;
+    margin: 0 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    place-items: center;
+    font-weight: 600;
+}
+
+#navbar ul li a {
+    color: #919191;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+/* This sets the hover action of the navbar links */
+#navbar ul:hover .active {
+    background: none;
+    border: none;
+}
+
+#navbar ul li a:hover {
+    color: white;
+}
+
+.tryfree {
+    background-color: #292929;
+    border-radius: 5px;
+    color: white;
+    padding: 0.5rem 0.5rem;
+    transition: 0.3s all ease;
+}
+
+.tryfree-logo {
+    cursor: pointer;
+    width: 40px !important;
+    height: 40px;
+    border-radius: 50% !important;
+    padding: 0.1rem !important;
+}
+
+.tryfree:hover {
+    background-color: #3b3b3b;
+}
+
+.credit-list {
+    border-radius: 5px;
+    position: absolute;
+    top: 65px;
+    right: 30px;
+    background-color: #3b3b3b;
+    padding: 10px;
+    width: 150px;
+}
+
+.credit-list:hover {
+    background-color: #6c6c6c;
+}
+
+
+#navbar-toggle,
+.navbar-toggle-icons {
+    display: none;
+}
+
+.navbar-toggle-label {
+    display: none;
+}
+
+
+@media (max-width:900px) {
+    #navbar #logo {
+        margin-left: 1rem;
+    }
+
+    #navbar {
+        width: 100%;
+        gap: 0px;
+        justify-content: space-between;
+        padding-right: 0rem;
+    }
+
+    #navbar ul {
+        display: none;
+    }
+
+    .navbar-toggle-icons {
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
+    }
+
+    .navbar-toggle-icon {
+        height: 2px;
+        width: 20px;
+        background-color: white;
+        margin-right: 15px;
+    }
+
+    #navbar-toggle:checked~.navbar-toggle-label {
+        z-index: 3;
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 5rem;
+        background-color: rgb(0, 0, 0);
+        padding: 1rem;
+        gap: 1rem;
+        left: 0;
+        cursor: pointer;
+        width: 100%;
+    }
+
+    .navbar-toggle-label li,
+    a {
+        list-style: none;
+        color: white;
+        text-decoration: none;
+    }
+}
